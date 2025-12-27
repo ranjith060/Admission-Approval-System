@@ -47,7 +47,7 @@ button{
 <option value="">-- Select Role --</option>
 <option value="admin">Admin</option>
 <option value="student">Student</option>
-<option value="faculty">Faculty</option>
+
 </select>
 
 <center>
