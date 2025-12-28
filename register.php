@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
-<link rel="stylesheet" href="/admission/assets/css/style.css">
-
+<title>Student Registration</title>
+<link rel="stylesheet" href="../assets/css/style.css">
 
 <style>
-<>
 body{
     margin:0;
     padding:0;
-    background:linear-gradient(135deg,#003366,#0059b3);
+    background:#f2f2f2;   /* white / light background */
     font-family:"Times New Roman", serif;
 }
 
+
 /* Center wrapper */
-.login-wrapper{
+.register-wrapper{
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
 }
 
-/* Login card */
-.login-box{
+/* Register card (same as login-box) */
+.register-box{
     width:380px;
     background:#ffffff;
     padding:30px;
@@ -32,17 +31,16 @@ body{
 }
 
 /* Heading */
-.login-box h2{
+.register-box h2{
     text-align:center;
     margin-bottom:25px;
     color:#003366;
-    text-decoration:none;
     border-bottom:2px solid #003366;
     padding-bottom:10px;
 }
 
 /* Labels */
-.login-box label{
+.register-box label{
     font-weight:bold;
     color:#333;
     display:block;
@@ -50,8 +48,7 @@ body{
 }
 
 /* Inputs */
-.login-box input,
-.login-box select{
+.register-box input{
     width:100%;
     padding:10px;
     margin-bottom:18px;
@@ -61,15 +58,14 @@ body{
 }
 
 /* Focus effect */
-.login-box input:focus,
-.login-box select:focus{
+.register-box input:focus{
     outline:none;
     border-color:#003366;
     box-shadow:0 0 5px rgba(0,51,102,0.5);
 }
 
 /* Button */
-.login-box button{
+.register-box button{
     width:100%;
     padding:10px;
     background:#003366;
@@ -81,38 +77,37 @@ body{
     transition:background 0.3s;
 }
 
-.login-box button:hover{
+.register-box button:hover{
     background:#0059b3;
 }
 
-/* Register text */
-.login-box p{
+/* Footer text */
+.register-box p{
     text-align:center;
     margin-top:20px;
     font-size:14px;
 }
 
-.login-box a{
+.register-box a{
     color:#003366;
     font-weight:bold;
     text-decoration:none;
 }
 
-.login-box a:hover{
+.register-box a:hover{
     text-decoration:underline;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="login-wrapper">
-  <div class="login-box">
+<div class="register-wrapper">
+  <div class="register-box">
 
-    <h2>Login</h2>
+    <h2>Student Registration</h2>
 
-    <form method="POST" action="login_check.php">
+    <form method="POST" action="register_save.php">
 
       <label>Username</label>
       <input type="text" name="username" required>
@@ -120,20 +115,16 @@ body{
       <label>Password</label>
       <input type="password" name="password" required>
 
-      <label>Role</label>
-      <select name="role" required>
-        <option value="">Select</option>
-        <option value="admin">Admin</option>
-        <option value="student">Student</option>
-      </select>
+      <label>Confirm Password</label>
+      <input type="password" name="confirm_password" required>
 
-      <button type="submit">Login</button>
-
-      <p>
-        New student? <a href="register.php">Register here</a>
-      </p>
+      <button type="submit">Register</button>
 
     </form>
+
+    <p>
+      Already registered? <a href="login.php">Login here</a>
+    </p>
 
   </div>
 </div>
