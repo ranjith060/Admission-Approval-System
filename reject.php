@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "db.php";
+include "../config/db.php";
 if($_SESSION['role']!='admin'){ header("Location: login.php"); }
 
 $id = $_GET['id'];
